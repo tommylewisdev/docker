@@ -1,0 +1,6 @@
+1  cd docker
+    2  docker build -t test .
+    3  docker build -t test .
+    4  docker ls
+    5  docker image ls
+    6  docker run -it test /bin/bash
