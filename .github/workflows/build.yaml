@@ -38,8 +38,8 @@ jobs:
           file: Dockerfile
           push: true
           tags: |
-            ghcr.io/test:latest
-            ghcr.io/test:${{ github.sha }}
+            ghcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:${{ github.sha }}
 
       - name: List built images
         run: docker images --format 'table {{.Repository}}\t{{.Tag}}\t{{.ID}}\t{{.Size}}'
