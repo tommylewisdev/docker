@@ -39,7 +39,7 @@ jobs:
           push: true
           tags: |
             ghcr.io/test:latest
-            ghcr.io/:${{ github.sha }}
+            ghcr.io/test:${{ github.sha }}
 
       - name: List built images
         run: docker images --format 'table {{.Repository}}\t{{.Tag}}\t{{.ID}}\t{{.Size}}'
