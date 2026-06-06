@@ -1,0 +1,21 @@
+name: hello world
+
+on:
+  workflow_call:
+    inputs:
+      # Define any inputs your workflow needs here
+      name:
+        description: 'A name to greet'
+        required: false
+        default: 'world'
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: say hello
+        run: echo "Hello, ${{ inputs.name }}!"
+       
+      
