@@ -18,10 +18,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
-      - name: call hello world workflow
-        uses: ./.github/workflows/shared.yaml
-        with:
-          name: Docker build workflow
+      # - name: call hello world workflow
+      #   uses: ./.github/workflows/shared.yaml
+      #   with:
+      #     name: Docker build workflow
 
       # - name: Set up QEMU
       #   uses: docker/setup-qemu-action@v4
