@@ -19,7 +19,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
       - name: call hello world workflow
-        uses: ./.github/actions/shared.yaml
+        uses: ./.github/workflows/shared.yaml
         with:
           name: Docker build workflow
 
