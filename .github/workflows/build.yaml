@@ -13,15 +13,16 @@ on:
 
 jobs:
   build:
+    
+    name: call hello world workflow
+    uses: tommylewisdev/docker/.github/workflows/shared.yml@main
+    with:
+      name: Docker build workflow
+  checkout:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
-      - name: call hello world workflow
-        uses: tommylewisdev/docker/.github/workflows/shared.yml@main
-        with:
-          name: Docker build workflow
         # uses: ./.github/workflows/shared.yml
       # https://github.com/tommylewisdev/docker.git
       # - name: Set up QEMU
